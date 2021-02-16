@@ -1,16 +1,27 @@
-*NOTE:* This file is a template that you can use to create the README for your project. The *TODO* comments below will highlight the information you should be sure to include.
+# Predicting Heart Failures
 
-# Your Project Title Here
+This project aims to predict heart failures based on 12 features of patient information data. Both Automated ML and Hyperparamter tuning are applied and the best performing model of both is deployed.
 
-*TODO:* Write a short introduction to your project.
 
 ## Project Set Up and Installation
-*OPTIONAL:* If your project has any special installation steps, this is where you should put it. To turn this project into a professional portfolio project, you are encouraged to explain how to set up this project in AzureML.
+Download the dataset below and upload it into the Datasets tab in your workspace in Microsoft Azure. 
 
 ## Dataset
 
 ### Overview
-*TODO*: Explain about the data you are using and where you got it from.
+The dataset used is from Kaggle regarding heart failures with 12 features to predict whether an event of death occurs or not. The 12 features are as follows:
+- Age
+- Anaemia
+- Creatinine
+- Diabetes
+- Injection fraction
+- High blood pressure
+- Platelets
+- Serum Creatinine
+- Serum Sodium
+- Sex
+- Smoking
+- Time
 
 ### Task
 *TODO*: Explain the task you are going to be solving with this dataset and the features you will be using for it.
