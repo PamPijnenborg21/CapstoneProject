@@ -24,13 +24,23 @@ The dataset used is from Kaggle regarding heart failures with 12 features to pre
 - Time
 
 ### Task
-*TODO*: Explain the task you are going to be solving with this dataset and the features you will be using for it.
+As the prediction task is to predict whether a patient passes away or not, it is a classification task. The above mentioned features will be used to predict the target value (die or not).
 
 ### Access
-*TODO*: Explain how you are accessing the data in your workspace.
+The dataset is uploaded in the AzureML workspace and is accessed with the get_by_name() function of AzureML. 
 
 ## Automated ML
-*TODO*: Give an overview of the `automl` settings and configuration you used for this experiment
+In the AutoML configuration the following parameters are applied:
+
+- experiment_timeout_minutes:30, The number of minutes the experiment should stay running.
+- primary_metric:'accuracy', The primary metric parameter for optimization.
+- n_cross_validations:5, As the dataset is relatively small, a low number of number of cross validations is applied.
+- max_concurrent_iterations: 4, To get a dedicated cluster per experiment, the max_concurrent_iterations is set at four, to manage the child runs and when they can be performed. Four max_concurrent_iterations is chosen, as the number of nodes in the cluster is also four.
+- training_data=train_data, The train_data is part of the dataset uploaded for this experiment.
+- label_column_name='DEATH_EVENT', The target column is death_event, as we want to predict whether a patient passes away.
+- featurization='auto', Automatic guardrails and featurization steps part of preprocessing.
+- compute_target=cpu_cluster, The ML model is trained on a cluster of Azure virtual machines from Azure Machine Learning Managed Compute. 'STANDARD_D2_V2' with a maximum of 4 nodes in a cpu_cluster is used as compute_target.
+- task = 'classification', As the goal is to predict whether someone dies or not, this experiment becomes a classification task type.
 
 ### Results
 *TODO*: What are the results you got with your automated ML model? What were the parameters of the model? How could you have improved it?
@@ -38,8 +48,10 @@ The dataset used is from Kaggle regarding heart failures with 12 features to pre
 *TODO* Remeber to provide screenshots of the `RunDetails` widget as well as a screenshot of the best model trained with it's parameters.
 
 ## Hyperparameter Tuning
-*TODO*: What kind of model did you choose for this experiment and why? Give an overview of the types of parameters and their ranges used for the hyperparameter search
+The parameters used in the HyperDrive configuration are as follows:
 
+- early_termination_policy: Improving the computational efficiency by terminaly poorly perfoming runs.
+- param_sampling: The parameter sampling method indicates the method of searching the hyperparameter space.
 
 ### Results
 *TODO*: What are the results you got with your model? What were the parameters of the model? How could you have improved it?
@@ -55,5 +67,3 @@ The dataset used is from Kaggle regarding heart failures with 12 features to pre
 - Demo of the deployed  model
 - Demo of a sample request sent to the endpoint and its response
 
-## Standout Suggestions
-*TODO (Optional):* This is where you can provide information about any standout suggestions that you have attempted.
