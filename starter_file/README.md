@@ -43,9 +43,7 @@ In the AutoML configuration the following parameters are applied:
 - task = 'classification', As the goal is to predict whether someone dies or not, this experiment becomes a classification task type.
 
 ### Results
-*TODO*: What are the results you got with your automated ML model? What were the parameters of the model? How could you have improved it?
-
-*TODO* Remeber to provide screenshots of the `RunDetails` widget as well as a screenshot of the best model trained with it's parameters.
+With AutoML the best model has an accuracy of 0.89968 and is an VotingEnsemble model. The parameters can be found in the screenshots folder in this github repositorty in the 'details' screenshot. The model could be improved by changing the autoML parameters (e.g. experiment timeout minutes). 
 
 ## Hyperparameter Tuning
 The parameters used in the HyperDrive configuration are as follows:
@@ -54,9 +52,7 @@ The parameters used in the HyperDrive configuration are as follows:
 - param_sampling: The parameter sampling method indicates the method of searching the hyperparameter space.
 
 ### Results
-*TODO*: What are the results you got with your model? What were the parameters of the model? How could you have improved it?
-
-*TODO* Remeber to provide screenshots of the `RunDetails` widget as well as a screenshot of the best model trained with it's parameters.
+The best model obtained with hyperparameter tuning has an accuracy of 0.86 with regularization strength 4.0 and max iterations 200. To possibly increase the accuracy of the best model, the hyperaparameter search space could be altered. 
 
 ## Model Deployment
 *TODO*: Give an overview of the deployed model and instructions on how to query the endpoint with a sample input.
