@@ -62,13 +62,16 @@ The parameters used in the HyperDrive configuration are as follows:
 - param_sampling: The parameter sampling method indicates the method of searching the hyperparameter space.
 
 ### Results
-The best model obtained with hyperparameter tuning has an accuracy of 0.86 with regularization strength 4.0 and max iterations 200. To possibly increase the accuracy of the best model, the hyperaparameter search space could be altered. 
+The best model obtained with hyperparameter tuning has an accuracy of 0.86 with regularization strength 4.0 and max iterations 200. To possibly increase the accuracy of the best model, the hyperaparameter search space could be altered. The screenshot below shows details of the best run produced with the hyperparameter tuning. A more detialed description of the hyperdrive run is shown in the screenshot thereafter, with the metrics of the best model in the last screenshot of this section.
+
 
 ![best_run_hyperdrive](https://user-images.githubusercontent.com/54527456/108688789-98d8f980-74f8-11eb-9912-0ce28b589430.PNG)
 ![run_details_hyperdrive](https://user-images.githubusercontent.com/54527456/108688792-99719000-74f8-11eb-9b7d-06e4b8d827f2.PNG)
 ![best_run_get_metrics_hyperdrive](https://user-images.githubusercontent.com/54527456/108688809-9b3b5380-74f8-11eb-8613-94865852defa.PNG)
 
 ## Model Deployment
+The screenshots below show registering the model, creating an inference config and deploying the model as a web service.
+
 ![service](https://user-images.githubusercontent.com/54527456/108688805-9aa2bd00-74f8-11eb-80fa-4eadadb04be7.PNG)
 ![model_deploy](https://user-images.githubusercontent.com/54527456/108688808-9b3b5380-74f8-11eb-93c8-56ebd2c1f534.PNG)
 
