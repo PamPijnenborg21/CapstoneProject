@@ -43,7 +43,18 @@ In the AutoML configuration the following parameters are applied:
 - task = 'classification', As the goal is to predict whether someone dies or not, this experiment becomes a classification task type.
 
 ### Results
-With AutoML the best model has an accuracy of 0.89968 and is an VotingEnsemble model. The parameters can be found in the screenshots folder in this github repositorty in the 'details' screenshot. The model could be improved by changing the autoML parameters (e.g. experiment timeout minutes). 
+With AutoML the best model has an accuracy of 0.89968 and is an VotingEnsemble model. The parameters can be found in the screenshots below. The model could be improved by changing the autoML parameters (e.g. experiment timeout minutes). 
+
+
+![models](https://user-images.githubusercontent.com/54527456/108688795-99719000-74f8-11eb-9471-21f7608d3710.PNG)
+![run](https://user-images.githubusercontent.com/54527456/108688797-9a0a2680-74f8-11eb-95b7-b4751528bb8e.PNG)
+![best_model](https://user-images.githubusercontent.com/54527456/108688799-9a0a2680-74f8-11eb-872b-58b63bd9a02b.PNG)
+![best_run](https://user-images.githubusercontent.com/54527456/108688800-9a0a2680-74f8-11eb-9bf9-091eea085019.PNG)
+![RUN_DETAILS](https://user-images.githubusercontent.com/54527456/108688801-9aa2bd00-74f8-11eb-8887-8a250c327731.PNG)
+![details](https://user-images.githubusercontent.com/54527456/108688803-9aa2bd00-74f8-11eb-9900-428f88ece8c6.PNG)
+
+
+
 
 ## Hyperparameter Tuning
 The parameters used in the HyperDrive configuration are as follows:
@@ -54,12 +65,14 @@ The parameters used in the HyperDrive configuration are as follows:
 ### Results
 The best model obtained with hyperparameter tuning has an accuracy of 0.86 with regularization strength 4.0 and max iterations 200. To possibly increase the accuracy of the best model, the hyperaparameter search space could be altered. 
 
+![best_run_hyperdrive](https://user-images.githubusercontent.com/54527456/108688789-98d8f980-74f8-11eb-9912-0ce28b589430.PNG)
+![run_details_hyperdrive](https://user-images.githubusercontent.com/54527456/108688792-99719000-74f8-11eb-9b7d-06e4b8d827f2.PNG)
+![best_run_get_metrics_hyperdrive](https://user-images.githubusercontent.com/54527456/108688809-9b3b5380-74f8-11eb-8613-94865852defa.PNG)
+
 ## Model Deployment
-*TODO*: Give an overview of the deployed model and instructions on how to query the endpoint with a sample input.
+![service](https://user-images.githubusercontent.com/54527456/108688805-9aa2bd00-74f8-11eb-80fa-4eadadb04be7.PNG)
+![model_deploy](https://user-images.githubusercontent.com/54527456/108688808-9b3b5380-74f8-11eb-93c8-56ebd2c1f534.PNG)
 
 ## Screen Recording
-*TODO* Provide a link to a screen recording of the project in action. Remember that the screencast should demonstrate:
-- A working model
-- Demo of the deployed  model
-- Demo of a sample request sent to the endpoint and its response
+https://youtu.be/WabipYy2348
 
