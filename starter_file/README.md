@@ -78,3 +78,6 @@ The screenshots below show registering the model, creating an inference config a
 ## Screen Recording
 https://youtu.be/WabipYy2348
 
+## Future Improvements
+Only a limited number of values is included in the RandomParameterSampler, while optimal values may be left out. So including a wider range of values in the RandomParameterSampler may increase performance. Furthermore, the chosen termination policy could be altered to experiment whether a more optimal model may result, because the used termination policy may not be the optimal one. The data cleaning could be executed differently and feature selection/engineering could be performed different, because selecting different features and feature engineering may increase performance. Last but not least, different Machine Learning models could be experimented with, as different models may generate a higher accuracy.
+
